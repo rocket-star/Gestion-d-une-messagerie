@@ -11,20 +11,28 @@
 
 #include <iostream>
 #include <fstream>
+#include <string.h>
 #include "BlocData.h"
 
 
-void afficher(std::ostream& os, const BlocData& b) {
-	os.width(BlocData::MAX);
+void afficher_bd(std::ostream& os, const BlocData& b) {
+	//os.width(MAX);
 	os << b.noBloc << " ";
 	os << b.data[MAX];
 }
 
 
-BlocData saisir(std::istream& is) {
+BlocData saisir_bd(std::istream& is, BlocData& b) {
 	BlocData b;
+	int tmp;
+	string mot;
+	is >> tmp;
+	is >> mot;
+	is >> mot;
+	is >> mot;
+	is >> mot;
+	is >> tmp;
 	is >> b.noBloc;
-	is.width(BlocData::MAX);//prend 21 caractere qui suivent
+	//is.width(MAX);//prend 21 caractere qui suivent
 	is >> b.data;
-
 }
