@@ -12,16 +12,17 @@
 * Structures de données et algorithmes - DUT1 Paris 5
 */
 
-const int MAX = 21;
+
 struct IdMessage {
+	enum { MAX = 21 };
 	char exp[MAX];
 	char dest[MAX];
 	char d[9];//date
 	char h[9];//heure
 };
 
-void afficher_idm(std::ostream& os, const IdMessage& m);
+void afficher_idm(std::ostream& os, const IdMessage m);
 
-void saisir_idm(std::istream& is, IdMessage& m);
+void saisir_idm(std::istream& is, IdMessage m);
 
 #endif

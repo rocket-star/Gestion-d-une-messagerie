@@ -15,7 +15,6 @@
 #include"IdMessage.h"
 #include"BlocData.h"
 
-const int MAX = 21;
 struct PaquetReseau {
 	int noPR;
 	IdMessage IdMes;
@@ -23,9 +22,8 @@ struct PaquetReseau {
 	int finMess;
 };
 
+PaquetReseau saisir_pr(std::istream& is);
 
-void saisir_pr(std::istream& is);
-
-void afficher_pr(std::ostream& os, const PaquetReseau& pr);
+void afficher_pr(std::ostream& os, PaquetReseau pr);
 
 #endif

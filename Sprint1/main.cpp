@@ -1,7 +1,7 @@
 #include<iostream>
 #include<iomanip>
 #include<fstream>
-#include "PaquetReseau.cpp"
+#include "PaquetReseau.h"
 using namespace std;
 
 int main() {
@@ -15,8 +15,7 @@ int main() {
 		exit(1);
 	}
 	while (fLigne.good()) {
-		PaquetReseau pr;
-		pr = saisir_pr(fLigne);
+		PaquetReseau pr = saisir_pr(fLigne);
 		afficher_pr(cout, pr);
 	}
 	fLigne.close();

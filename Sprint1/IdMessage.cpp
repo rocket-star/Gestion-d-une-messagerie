@@ -13,20 +13,20 @@
 #include <fstream>
 #include "IdMessage.h"
 
-void saisir_idm(std::istream& is, IdMessage& m) {
-	int nb;
-	is >> nb;
-	is >> m.exp[MAX];
-	is >> m.dest[MAX];
-	is >> m.d[9];
-	is >> m.h[9];
+void saisir_idm(std::istream& is, IdMessage m) {
+	//int nb;
+	//is >> nb;
+	is >> m.exp;
+	is >> m.dest;
+	is >> m.d;
+	is >> m.h;
 }
 
-void afficher_idm(std::ostream& os, const IdMessage& m) {
-	os << m.exp[MAX] << " ";
-	os << m.dest[MAX] << " ";
-	os << m.d[9] << " ";
-	os << m.h[9] << " ";
+void afficher_idm(std::ostream& os, const IdMessage m) {
+	os << m.exp << " ";
+	os << m.dest << " ";
+	os << m.d << " ";
+	os << m.h << " ";
 }
 
 

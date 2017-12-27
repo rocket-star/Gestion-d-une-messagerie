@@ -11,10 +11,10 @@
 * Structures de données et algorithmes - DUT1 Paris 5
 */
 
-const int MAX = 21;
 
 
 struct BlocData {
+	enum{ MAX=21 };
 	unsigned int noBloc;
 	char data[MAX];
 };
@@ -25,7 +25,7 @@ struct BlocData {
 * @param [in] os : flux d'affichage
 * @param [in] b : BlocData à afficher
 */
-void afficher_bd(std::ostream& os, const BlocData& b);
+void afficher_bd(std::ostream& os, const BlocData b);
 
 
 /**
@@ -33,6 +33,6 @@ void afficher_bd(std::ostream& os, const BlocData& b);
 * @param [in] is : flux d'affichage
 * @param [in-out] b : BlocData à remplir
 */
-BlocData saisir_bd(std::istream& is, BlocData& b);
+BlocData saisir_bd(std::istream& is, BlocData b);
 
 #endif

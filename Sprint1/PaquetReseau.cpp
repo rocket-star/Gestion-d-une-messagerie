@@ -18,18 +18,17 @@
 using namespace std;
 
 
-void saisir_pr(std::istream& is) {
-	PaquetReseau p;
-	std::string tmp;
+PaquetReseau saisir_pr(std::istream& is) {
+	PaquetReseau pr;
 
-	is >> p.noPR;
-	saisir_idm(is, p.IdMes);
-	is >> p.finMess;
-	saisir_bd(is, p.blocD);
+	is >> pr.noPR;
+	saisir_idm(is, pr.IdMes);
+	is >> pr.finMess;
+	saisir_bd(is, pr.blocD);
+	return pr;
 }
 
-void afficher_pr(std::ostream& os, const PaquetReseau& pr) {
-	PaquetReseau pr;
+void afficher_pr(std::ostream& os, PaquetReseau pr) {
 	os << pr.noPR << " ";
 	afficher_idm(os, pr.IdMes);
 	os << pr.finMess << " ";
